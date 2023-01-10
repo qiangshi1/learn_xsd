@@ -1,0 +1,20 @@
+<!-- any -->
+<!-- any元素用于扩展 -->
+<!-- 其实就是支持导入多个xsd文件 -->
+
+<note xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com test11.xsd http://www.microsoft.com test11_children.xsd">
+  
+  <person>
+  <firstname>Hege</firstname>
+  <lastname>Refsnes</lastname>
+  <children>
+    <childname>Cecilie</childname>
+  </children>
+  </person> 
+
+  <person>
+    <firstname>Stale</firstname>
+    <lastname>Refsnes</lastname>
+  </person>
+
+</note>

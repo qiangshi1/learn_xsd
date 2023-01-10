@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!-- 指示器 -->
+<!-- 通过指示器，我们可以控制在文档中使用元素的方式。 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3schools.com" targetNamespace="http://www.w3schools.com" elementFormDefault="qualified">
+
+<!-- all指示器 -->
+<xs:complexType name="persontype_all">
+  <xs:all> <!-- 元素的出现可以乱序 -->
+    <xs:element name="firstname" type="xs:string"/>
+    <xs:element name="lastname" type="xs:string"/>
+  </xs:all>
+</xs:complexType>
+
+<!-- choice指示器 -->
+<xs:complexType name="persontype_choice">
+  <xs:choice> <!-- 下边的条目只能有一个 -->
+    <xs:element name="firstname" type="xs:string"/>
+    <xs:element name="middlename" type="xs:string"/>
+    <xs:element name="lastname" type="xs:string"/>
+  </xs:choice>
+</xs:complexType>
+
+<!-- sequence指示器 元素顺序出现，不再演示 -->
+
+<!-- occurrence指示器 maxOccurs 最大元素重复个数（默认值是1）minOccurs 最小元素重复个数（默认值是1） -->
+<!-- 另，如需使某个元素的出现次数不受限制，请使用 maxOccurs="unbounded" -->
+<xs:complexType name="persontype_occurrence">
+  <xs:sequence>
+    <xs:element name="name" type="xs:string"/>
+    <xs:element name="alias" type="xs:string" maxOccurs="10" minOccurs="5"/>
+  </xs:sequence>
+</xs:complexType>
+
+<!-- group指示器 -->
+<!-- 这个和一般的引用有什么区别？ -->
+
+
+<xs:element name="note"> <!-- 定义一个element -->
+   <xs:complexType>
+    <xs:sequence>
+
+      <xs:element name="person1" type="persontype_all"/> <!-- 元素的出现可以乱序 -->
+      <xs:element name="person2" type="persontype_all"/> <!-- 元素的出现可以乱序 -->
+      <xs:element name="person3" type="persontype_choice"/> <!-- 元素的出现可以乱序 -->
+
+      <xs:element name="person4" type="persontype_occurrence"/> <!-- 元素的出现个数限制 -->
+
+
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

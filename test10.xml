@@ -1,6 +1,32 @@
 <!-- 指示器 -->
 <!-- 通过指示器，我们可以控制在文档中使用元素的方式。 -->
-<note xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com test9.xsd">
-  
+<note xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com test10.xsd">
+  <person1>
+    <firstname>Zhao</firstname>
+    <lastname>Si</lastname>
+  </person1>
+  <person2>
+    <lastname>Si</lastname>
+    <firstname>Zhao</firstname>
+  </person2>
+
+  <person3> 
+    <lastname>Si</lastname>
+  </person3>
+
+  <!-- 错误 -->
+  <!-- <person3> 
+    <lastname>Si</lastname>
+    <firstname>Si</firstname>
+  </person3> -->
+
+  <person4> 
+    <name>ZhaosiSi</name>
+    <alias>Who</alias>
+    <alias>really</alias>
+    <alias>care</alias>
+    <alias>about</alias>
+    <alias>thee</alias>
+  </person4>
 
 </note>
