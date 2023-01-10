@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!-- 复合元素 -->
+<!-- 仅含文本（也可以有属性） -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3schools.com" targetNamespace="http://www.w3schools.com" elementFormDefault="qualified">
+
+<xs:complexType name="lettertype" mixed="true"> <!-- 针对写法二的引用对象  -->
+  <xs:sequence>
+    <xs:element name="name" type="xs:string"/>
+    <xs:element name="orderid" type="xs:positiveInteger"/>
+    <xs:element name="shipdate" type="xs:date"/>
+  </xs:sequence>
+</xs:complexType>
+
+
+<xs:element name="note"> <!-- 定义一个element -->
+   <xs:complexType>
+    <xs:sequence>
+      <!-- 写法一 -->
+      <xs:element name="letter">
+        <!-- 注意： 为了使字符数据可以出现在 "letter" 的子元素之间，mixed 属性必须被设置为 "true"。<xs:sequence> 标签 (name、orderid 以及 shipdate ) 意味着被定义的元素必须依次出现在 "letter" 元素内部。 -->
+        <xs:complexType mixed="true">
+          <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="orderid" type="xs:positiveInteger"/>
+            <xs:element name="shipdate" type="xs:date"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!-- 写法二 引用 -->
+      <xs:element name="letter2" type="lettertype"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

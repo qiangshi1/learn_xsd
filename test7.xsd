@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<!-- 复合空元素 -->
-<!-- 仅含属性 -->
+<!-- 复合元素 -->
+<!-- 仅含元素 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3schools.com" targetNamespace="http://www.w3schools.com" elementFormDefault="qualified">
 
 <xs:complexType name="persontype">

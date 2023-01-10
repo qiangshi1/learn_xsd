@@ -1,0 +1,7 @@
+<!-- 复合元素 -->
+<!-- 仅含文本（也可以有属性） -->
+<note xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com test8.xsd">
+  <!-- shoesize是一个仅含文本的复合元素（也含有属性） -->
+  <shoesize country="France">35</shoesize>
+  <shoesize2 country="Italy">88</shoesize2>
+</note>
