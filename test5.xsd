@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!-- 复合元素 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3schools.com" targetNamespace="http://www.w3schools.com" elementFormDefault="qualified">
+
+<xs:complexType name="personinfo"> <!-- 针对复合元素写法二 --> <!-- 定义一个type -->
+  <xs:sequence>
+    <xs:element name="firstname" type="xs:string"/>
+    <xs:element name="lastname" type="xs:string"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fullpersoninfo">
+  <xs:complexContent>
+    <xs:extension base="personinfo">
+      <xs:sequence>
+        <xs:element name="address" type="xs:string"/>
+        <xs:element name="city" type="xs:string"/>
+        <xs:element name="country" type="xs:string"/>
+      </xs:sequence>
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+
+<xs:element name="note"> <!-- 定义一个element -->
+  <xs:complexType>
+    <xs:sequence>
+      <!-- 定义复合元素 写法一 -->
+      <xs:element name="employee">
+        <xs:complexType> <!-- 这个其实是一个匿名type -->
+          <xs:sequence> <!-- xs:sequence是一个指示器，后续会有讨论 -->
+            <xs:element name="firstname" type="xs:string"/>
+            <xs:element name="lastname" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!-- 定义复合元素 写法二 -->
+      <xs:element name="employee2" type="personinfo"/>
+      <!-- 上述的复合元素写法二支持多个元素共用一个type -->
+      <xs:element name="employee3" type="personinfo"/>
+      <!-- 使用 xs:extension base 实现继承（类似于继承的效果）-->
+      <xs:element name="employee4" type="fullpersoninfo"/>
+
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

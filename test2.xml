@@ -1,0 +1,15 @@
+<!-- 简易元素 -->
+<!-- 简易元素不包括其他任何元素或属性 -->
+<!-- 简易元素可以是布尔、字符串、数据等等，或者自定义？？？ -->
+<!-- 在schema中可以限定（facets）简易元素的内容 -->
+<!-- 如下是一些简易元素 -->
+<!-- 关于default的作用还要再测一测 -->
+<note xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com note.xsd">
+  <lastname>Refsnes</lastname>
+  <age>36</age>
+  <dateborn>1970-03-27</dateborn>
+  <color1>blue</color1> <!-- schema中默认值是red，这里校验通过 -->
+  <!-- <color3>blue</color3> --> <!-- schema固定值是red，这里校验不通过 -->
+  <color3>red</color3> <!-- schema固定值是red，这里校验通过 -->
+
+</note>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- 属性 -->
+<!-- 属性也可以对内容进行限定，后续再测试 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3schools.com" targetNamespace="http://www.w3schools.com" elementFormDefault="qualified">
+
+<xs:element name="note">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="age" type="xs:integer"/><!--不知道为什么这边必须填充一个element，否则出错-->
+    </xs:sequence>
+    <xs:attribute name="lang" type="xs:string"></xs:attribute> 
+    <!-- <xs:attribute name="lang" type="xs:string" default="EN"></xs:attribute> --> <!--属性也可以配置default，但是其作用还有待于进一步研究下-->
+    <!-- <xs:attribute name="lang" type="xs:string" fixed="Ja"></xs:attribute> -->  <!--属性也可以配置fixed，这里会校验出错，因为fixed的值不对-->
+    <!-- 上述11-13行只能有一行处于非注释状态 -->
+    <xs:attribute name="writer" type="xs:string"></xs:attribute> <!--属性也可以配置use，表示可选还是必选，默认是可选的 -->
+
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

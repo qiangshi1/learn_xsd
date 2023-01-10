@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!-- 限定 facets -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3schools.com" targetNamespace="http://www.w3schools.com" elementFormDefault="qualified">
+
+<xs:simpleType name="carType"> <!-- 针对枚举约束-写法二 -->
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Audi"/>
+    <xs:enumeration value="Golf"/>
+    <xs:enumeration value="BMW"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:element name="note">
+  <xs:complexType>
+    <xs:sequence>
+      <!-- 范围约束 -->
+      <xs:element name="age">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/> <!-- 最小值为0 -->
+            <xs:maxInclusive value="120"/> <!-- 120 -->
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <!-- 枚举约束-写法一 -->
+      <xs:element name="car">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Audi"/>
+            <xs:enumeration value="Golf"/>
+            <xs:enumeration value="BMW"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <!-- 枚举约束-写法二 -->
+      <xs:element name="car2" type="carType"/>
+      <!-- 模式约束 pattern constraint 类似于正则约束 例一 -->
+      <xs:element name="letter">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[a-z]"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <!-- 模式约束 例二 -->
+      <xs:element name="initials">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][A-Z][A-Z]"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <!-- 模式约束 例三 -->
+      <xs:element name="initials2">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z][a-zA-Z][a-zA-Z]"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <!-- 模式约束 例四 -->
+      <xs:element name="choice">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[xyz]"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <!-- 模式约束 例五 -->
+      <xs:element name="prodid">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:pattern value="[0-9][0-9][0-9][0-9][0-9]"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <!-- 模式约束 例六 -->
+      <xs:element name="letter2">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="([a-z])*"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <!-- 模式约束 例七 -->
+      <xs:element name="letter3">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="([a-z][A-Z])+"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <!-- 模式约束 例八 -->
+      <xs:element name="gender">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="male|female"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <!-- 模式约束 例九 -->
+      <xs:element name="password">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9]{8}"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <!-- 空白字符约束 - 暂不测试 -->
+
+      <!-- 长度约束 例一 -->
+      <xs:element name="password2">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:length value="8"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <!-- 长度约束 例二 -->
+      <xs:element name="password3">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="5"/>
+            <xs:maxLength value="8"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

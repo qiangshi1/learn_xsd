@@ -1,0 +1,33 @@
+<!-- 复合空元素 -->
+<!-- 复合元素就是可能包含其他元素/属性的元素 -->
+<!-- 有四种复合元素，它们是: 空元素/包含其他元素的元素/仅包含文本的元素/包含元素和文本的元素 -->
+<note xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com note.xsd">
+  <!-- product是一个复合元素 -->
+  <!-- <product pid="1345"/> -->
+  <!-- employee是一个复合元素 -->
+  <employee>
+    <firstname>John</firstname>
+    <lastname>Smith</lastname>
+  </employee>
+  <employee2>
+    <firstname>Zs</firstname>
+    <lastname>Ls</lastname>
+  </employee2>
+  <employee3>
+    <firstname>Días</firstname>
+    <lastname>Leonardo</lastname>
+  </employee3>
+  <employee4>
+    <firstname>Zhao</firstname>
+    <lastname>Si</lastname>
+    <address>Notre Dame Cathedral</address>
+    <city>Paris</city>
+    <country>Franch</country>
+  </employee4>
+  <!-- food是一个复合元素 -->
+  <!-- <food type="dessert">Ice cream</food> -->
+  <!-- description是一个复合元素 -->
+  <!-- <description>
+    It happened on <date lang="norwegian">03.03.99</date> ....
+  </description> -->
+</note>

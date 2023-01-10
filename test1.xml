@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- 基本用法展示 -->
+
+<!-- xmlns="http://www.runoob.com" 规定了默认命名空间的声明。此声明会告schema验证器，在此XML文档中使用的所有元素都被声明于 "http://www.runoob.com" 这个命名空间。-->
+<!-- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi命名空间 -->
+<!-- xsi:schemaLocation="http://www.w3schools.com note.xsd" 使用的xsd的命名空间以及文件路径 -->
+<!-- http://www.w3schools.com应该和xsd中的targetNamespace对应 -->
+<note xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com note.xsd">
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!-- 简易元素 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3schools.com" targetNamespace="http://www.w3schools.com" elementFormDefault="qualified">
+
+<xs:element name="note">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="lastname" type="xs:string"/>
+      <xs:element name="age" type="xs:integer"/>
+      <xs:element name="dateborn" type="xs:date"/>
+      <xs:element name="color1" type="xs:string" default="red"/>
+      <xs:element name="color3" type="xs:string" fixed="red"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>
