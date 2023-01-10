@@ -1,7 +1,7 @@
 <!-- 复合元素 -->
 <!-- 复合元素就是可能包含其他元素/属性的元素 -->
 <!-- 有四种复合元素，它们是: 空元素/包含其他元素的元素/仅包含文本的元素/包含元素和文本的元素 -->
-<note xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com note.xsd">
+<note xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com test5.xsd">
   <!-- product是一个复合元素 -->
   <!-- <product pid="1345"/> -->
   <!-- employee是一个复合元素 -->

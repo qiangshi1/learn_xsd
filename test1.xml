@@ -5,7 +5,7 @@
 <!-- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi命名空间 -->
 <!-- xsi:schemaLocation="http://www.w3schools.com note.xsd" 使用的xsd的命名空间以及文件路径 -->
 <!-- http://www.w3schools.com应该和xsd中的targetNamespace对应 -->
-<note xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com note.xsd">
+<note xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com test1.xsd">
   <to>Tove</to>
   <from>Jani</from>
   <heading>Reminder</heading>

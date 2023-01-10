@@ -1,0 +1,13 @@
+<!-- 复合元素 -->
+<!-- 仅含元素 -->
+<note xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com test7.xsd">
+  <!-- person是一个仅含元素的复合元素 -->
+  <person>
+    <firstname>John</firstname>
+    <lastname>Smith</lastname>
+  </person>
+  <person2>
+    <firstname>John</firstname>
+    <lastname>Smith</lastname>
+  </person2>
+</note>

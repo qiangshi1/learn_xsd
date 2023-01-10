@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- 复合空元素 -->
+<!-- 仅含属性 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3schools.com" targetNamespace="http://www.w3schools.com" elementFormDefault="qualified">
+
+<xs:complexType name="persontype">
+  <xs:sequence>
+    <xs:element name="firstname" type="xs:string"/>
+    <xs:element name="lastname" type="xs:string"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:element name="note"> <!-- 定义一个element -->
+   <xs:complexType>
+    <xs:sequence>
+      <!-- 写法一 -->
+      <xs:element name="person">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="firstname" type="xs:string"/>
+            <xs:element name="lastname" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!-- 写法二 引用写法 -->
+      <xs:element name="person2" type="persontype"/>
+
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

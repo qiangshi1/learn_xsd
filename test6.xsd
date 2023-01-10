@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!-- 复合空元素 -->
+<!-- 仅含属性 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3schools.com" targetNamespace="http://www.w3schools.com" elementFormDefault="qualified">
+
+<xs:complexType name="prodtype">
+  <xs:attribute name="prodid" type="xs:positiveInteger"/>
+</xs:complexType>
+
+<xs:element name="note"> <!-- 定义一个element -->
+   <xs:complexType>
+    <xs:sequence>
+      <!-- 写法一一直出错 -->
+      <!-- 写法二 -->
+      <xs:element name="product">
+        <xs:complexType>
+          <xs:attribute name="prodid" type="xs:positiveInteger"/>
+        </xs:complexType>
+      </xs:element>
+      <!-- 写法三 外部引用 -->
+      <xs:element name="product2" type="prodtype"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

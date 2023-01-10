@@ -1,6 +1,6 @@
 <!-- 属性 -->
 <!-- xml中描述子级元素的有两种：元素和属性 -->
 <!-- 这里是属性的schema -->
-<note lang="En" xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com note.xsd">
+<note lang="En" xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com test3.xsd">
   <age>36</age>
 </note>
