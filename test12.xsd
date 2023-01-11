@@ -1,6 +1,14 @@
 <?xml version="1.0"?>
-<!-- any -->
+<!-- anyAttribute -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3schools.com" targetNamespace="http://www.w3schools.com" elementFormDefault="qualified">
+
+<xs:attribute name="xxxgender">
+  <!-- <xs:simpleType> -->
+    <!-- <xs:restriction base="xs:string"> -->
+      <!-- <xs:pattern value="male|female"/> -->
+    <!-- </xs:restriction> -->
+  <!-- </xs:simpleType> -->
+</xs:attribute>
 
 <xs:element name="note"> <!-- 定义一个element -->
   <xs:complexType>
@@ -12,7 +20,8 @@
             <xs:element name="firstname" type="xs:string"/>
             <xs:element name="lastname" type="xs:string"/>
           </xs:sequence>
-          <xs:anyAttribute/> <!-- anyAttribute在sequence外边 -->
+          <!-- anyAttribute在sequence外边 -->
+          <xs:anyAttribute/> 
         </xs:complexType>
       </xs:element>
 

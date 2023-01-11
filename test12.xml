@@ -1,14 +1,14 @@
 <!-- anyAttribute -->
 <!-- 类似于any，anyAttribute是针对属性的 -->
 
-<note xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com test12.xsd http://www.microsoft.com test12_gender.xsd">
+<note xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.microsoft.com test12.xsd http://www.w3schools.com test12_gender.xsd">
   
-  <person gender="female">
+  <!-- <person gender="female">
     <firstname>Hege</firstname>
     <lastname>Refsnes</lastname>
-  </person> 
+  </person>  -->
 
-  <person>
+  <person gender="female">
     <firstname>Stale</firstname>
     <lastname>Refsnes</lastname>
   </person>
