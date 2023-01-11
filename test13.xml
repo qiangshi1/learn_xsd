@@ -1,0 +1,10 @@
+<!-- 元素替换 Element Substitution -->
+<!-- 通过 XML Schema，一个元素可对另一个元素进行替换。 -->
+<!-- 暂未测试通过，xmlschema似乎不支持substitutionGroup -->
+<note xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.microsoft.com test12.xsd http://www.w3schools.com test12_gender.xsd">
+  
+  <customer>
+    <name>John Smith</name>
+  </customer>
+
+</note>
